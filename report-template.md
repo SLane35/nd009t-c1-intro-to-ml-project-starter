@@ -17,16 +17,17 @@ After adding additional features, the model achieved a score of 1.80244 as oppos
 
 ## Hyper parameter tuning
 ### How much better did your model preform after trying different hyper parameters?
-After training for 7 minutes instead of 5, and not ignoring the columns "casual" and "registered", and using the "atemp" column as a sample column, the model achieved a score of 1.97455.
+After training for 7 minutes instead of 5, and not ignoring the columns "casual" and "registered", as well as including hyperparameters for the XGB algorithm, the model achieved a score of 1.97535.
 
 ### If you were given more time with this dataset, where do you think you would spend more time?
 I would train it for longer.
 
 ### Create a table with the models you ran, the hyperparameters modified, and the kaggle score.
-	model	hpo1	hpo2	hpo3	score
-0	initial		{'ignored_columns': ['casual', 'registered']}	600	1.72711
-1	add_features		{'ignored_columns': ['casual', 'registered']}	600	1.80244
-2	hpo	atemp		720	1.97455
+
+     model	hpo1	hpo2	hpo3	score
+0	initial	gini	{'ignored_columns': ['casual', 'registered']}	600	1.72711
+1	add_features	gini	{'ignored_columns': ['casual', 'registered']}	600	1.80244
+2	hpo	mse		720	1.97455
 
 ### Create a line plot showing the top model score for the three (or more) training runs during the project.
 
